@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>XXVII ONPCE Held at UFSCar Sorocaba — OptPL News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --teal:    #2a7d8c;
+      --teal2:   #3a9db0;
+      --orange:  #f5833a;
+      --cream:   #f5efe6;
+      --cream2:  #faf6f0;
+      --navy:    #1a3a4a;
+      --ink:     #2c2c2c;
+      --muted:   #6e7a7e;
+      --rule:    #ddd6cc;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--cream2);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--teal);
+      padding: 0 2.5rem;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(42,125,140,.3);
+    }
+    .nav-back {
+      display: flex; align-items: center; gap: .5rem;
+      color: rgba(255,255,255,.85); text-decoration: none;
+      font-family: 'Nunito', sans-serif;
+      font-size: .82rem; font-weight: 700;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--orange); }
+    .nav-back::before { content: '←'; font-size: 1rem; }
+    .nav-brand {
+      font-family: 'Nunito', sans-serif;
+      font-size: .78rem; font-weight: 900;
+      color: var(--orange); letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      background: var(--teal);
+      color: #fff;
+      padding: 4rem 2.5rem 3rem;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute; right: -60px; top: -60px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: rgba(245,131,58,.1);
+    }
+    .article-hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+    .article-category {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: .68rem; font-weight: 800;
+      letter-spacing: .14em; text-transform: uppercase;
+      padding: .2rem .75rem; border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+    .article-hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 900; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .article-meta {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      font-size: .8rem; color: rgba(255,255,255,.65);
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,.18);
+    }
+    .article-meta span strong { color: rgba(255,255,255,.9); }
+
+    /* ── ARTICLE IMAGE ── */
+    .article-image-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 2.5rem;
+      transform: translateY(-2rem);
+    }
+    .article-image-wrap figure {
+      border-radius: 4px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+    }
+    .article-image {
+      width: 100%; height: 380px;
+      background: linear-gradient(135deg, var(--teal) 0%, var(--teal2) 40%, var(--orange) 100%);
+      display: flex; align-items: center; justify-content: center;
+      position: relative; overflow: hidden;
+    }
+    /* SVG illustration of a workshop/conference scene */
+    .article-image svg { width: 100%; height: 100%; }
+    figcaption {
+      background: var(--navy);
+      color: rgba(255,255,255,.6);
+      font-size: .75rem; padding: .6rem 1rem;
+      font-style: italic;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 2.5rem 5rem;
+    }
+    .article-body p {
+      font-size: 1rem; color: #3a3a3a;
+      margin-bottom: 1.4rem;
+    }
+    .article-body h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.3rem; font-weight: 900;
+      color: var(--teal); margin: 2.4rem 0 .8rem;
+    }
+    .article-body h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px; height: 1em;
+      background: var(--orange);
+      margin-right: .6rem;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+    blockquote {
+      border-left: 4px solid var(--orange);
+      background: var(--cream);
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--navy); font-style: italic;
+      margin: 0;
+    }
+    blockquote cite {
+      display: block; margin-top: .6rem;
+      font-size: .8rem; color: var(--muted);
+      font-style: normal;
+    }
+    .highlight-box {
+      background: var(--teal);
+      color: #fff;
+      border-radius: 4px;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: .82rem; font-weight: 800;
+      color: var(--orange); text-transform: uppercase;
+      letter-spacing: .1em; margin-bottom: .8rem;
+    }
+    .highlight-box ul { list-style: none; }
+    .highlight-box li {
+      font-size: .9rem; color: rgba(255,255,255,.88);
+      padding: .3rem 0 .3rem 1.2rem; position: relative;
+    }
+    .highlight-box li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--orange);
+    }
+    .tags { display: flex; flex-wrap: wrap; gap: .5rem; margin-top: 2.5rem; padding-top: 1.5rem; border-top: 1px solid var(--rule); }
+    .tag {
+      background: var(--cream); border: 1.5px solid var(--rule);
+      padding: .22rem .7rem; border-radius: 20px;
+      font-size: .76rem; color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,.45);
+      padding: 2rem 2.5rem; text-align: center; font-size: .76rem;
+    }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 1.2rem; }
+      .article-hero { padding: 3rem 1.2rem 2.5rem; }
+      .article-image-wrap, .article-body { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .article-image { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-back">Back to OptPL</a>
+  <span class="nav-brand">OptPL News</span>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-category">Workshop</span>
+    <h1>XXVII ONPCE Brings Together 100+ Researchers at UFSCar Sorocaba</h1>
+    <div class="article-meta">
+      <span><strong>Date:</strong> March 13, 2026</span>
+      <span><strong>Author:</strong> OptPL Communications</span>
+      <span><strong>Location:</strong> UFSCar, Sorocaba, SP</span>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE -->
+<div class="article-image-wrap">
+  <figure>
+    <div class="article-image">
+      <!-- SVG illustration: conference/workshop scene -->
+      <svg viewBox="0 0 900 380" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+        <!-- Background -->
+        <rect width="900" height="380" fill="url(#bggrad)"/>
+        <defs>
+          <linearGradient id="bggrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1a3a4a"/>
+            <stop offset="100%" stop-color="#2a7d8c"/>
+          </linearGradient>
+        </defs>
+        <!-- Decorative circles -->
+        <circle cx="800" cy="60" r="120" fill="rgba(245,131,58,.12)"/>
+        <circle cx="100" cy="320" r="90" fill="rgba(58,157,176,.15)"/>
+        <!-- Auditorium seats rows (simplified) -->
+        <g opacity="0.25">
+          <rect x="60" y="220" width="780" height="8" rx="4" fill="#fff"/>
+          <rect x="60" y="250" width="780" height="8" rx="4" fill="#fff"/>
+          <rect x="60" y="280" width="780" height="8" rx="4" fill="#fff"/>
+        </g>
+        <!-- People silhouettes in audience -->
+        <g fill="rgba(255,255,255,0.18)">
+          <ellipse cx="100" cy="218" rx="14" ry="18"/>
+          <rect x="92" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="150" cy="218" rx="14" ry="18"/>
+          <rect x="142" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="200" cy="218" rx="14" ry="18"/>
+          <rect x="192" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="260" cy="218" rx="14" ry="18"/>
+          <rect x="252" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="320" cy="218" rx="14" ry="18"/>
+          <rect x="312" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="380" cy="218" rx="14" ry="18"/>
+          <rect x="372" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="440" cy="218" rx="14" ry="18"/>
+          <rect x="432" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="500" cy="218" rx="14" ry="18"/>
+          <rect x="492" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="560" cy="218" rx="14" ry="18"/>
+          <rect x="552" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="620" cy="218" rx="14" ry="18"/>
+          <rect x="612" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="680" cy="218" rx="14" ry="18"/>
+          <rect x="672" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="740" cy="218" rx="14" ry="18"/>
+          <rect x="732" y="218" width="16" height="20" rx="3"/>
+          <ellipse cx="800" cy="218" rx="14" ry="18"/>
+          <rect x="792" y="218" width="16" height="20" rx="3"/>
+        </g>
+        <!-- Stage/podium -->
+        <rect x="300" y="140" width="300" height="70" rx="4" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+        <!-- Speaker at podium -->
+        <ellipse cx="450" cy="138" rx="16" ry="20" fill="rgba(245,131,58,.7)"/>
+        <rect x="436" y="150" width="28" height="35" rx="4" fill="rgba(245,131,58,.6)"/>
+        <!-- Projection screen -->
+        <rect x="280" y="40" width="340" height="90" rx="3" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+        <!-- Screen content: graph nodes (OptPL logo style) -->
+        <circle cx="380" cy="82" r="10" fill="#3a9db0" opacity=".9"/>
+        <circle cx="430" cy="65" r="13" fill="#3a9db0" opacity=".9"/>
+        <circle cx="470" cy="90" r="8" fill="#1a3a4a" stroke="#3a9db0" stroke-width="2"/>
+        <circle cx="510" cy="70" r="9" fill="rgba(200,200,200,.4)"/>
+        <line x1="380" y1="82" x2="430" y2="65" stroke="#3a9db0" stroke-width="2" opacity=".7"/>
+        <line x1="430" y1="65" x2="470" y2="90" stroke="#3a9db0" stroke-width="2" opacity=".7"/>
+        <line x1="470" y1="90" x2="510" y2="70" stroke="rgba(200,200,200,.3)" stroke-width="1.5"/>
+        <!-- Arrow (orange starburst simplified) -->
+        <polygon points="530,55 545,68 520,75 540,80 515,90 535,72" fill="#f5833a" opacity=".85"/>
+        <!-- Title text on screen -->
+        <rect x="300" y="98" width="200" height="6" rx="3" fill="rgba(255,255,255,.25)"/>
+        <rect x="330" y="110" width="140" height="4" rx="2" fill="rgba(255,255,255,.15)"/>
+        <!-- Banner text -->
+        <text x="450" y="175" text-anchor="middle" font-family="sans-serif" font-size="11" font-weight="bold" fill="rgba(255,255,255,.6)" letter-spacing="2">XXVII ONPCE · SOROCABA 2026</text>
+        <!-- Decorative graph edges in background -->
+        <g opacity="0.07" stroke="#fff" stroke-width="1.5" fill="none">
+          <line x1="0" y1="80" x2="120" y2="180"/>
+          <line x1="120" y1="180" x2="60" y2="320"/>
+          <circle cx="120" cy="180" r="6" fill="#fff" stroke="none"/>
+          <circle cx="60" cy="320" r="4" fill="#fff" stroke="none"/>
+          <line x1="780" y1="100" x2="860" y2="240"/>
+          <line x1="860" y1="240" x2="820" y2="360"/>
+          <circle cx="860" cy="240" r="5" fill="#fff" stroke="none"/>
+        </g>
+      </svg>
+    </div>
+    <figcaption>XXVII ONPCE opening session at UFSCar Sorocaba campus, March 12, 2026. Photo: OptPL / UFSCar.</figcaption>
+  </figure>
+</div>
+
+<!-- BODY -->
+<div class="article-body">
+
+  <p>The <strong>27th National Workshop on Cutting, Packing, Lot-Sizing, and Scheduling Problems and Related Topics</strong> (ONPCE) was held on March 12–13, 2026, at the UFSCar campus in Sorocaba, São Paulo. The event brought together more than 100 researchers, graduate students, and industry practitioners from across Brazil and abroad, marking the fourth consecutive in-person edition since the pandemic.</p>
+
+  <p>Organized within the scope of the FAPESP Thematic Project <em>"Cutting, Packing, Lot-Sizing, Scheduling, Routing and Location Problems and their Integration in Industrial and Logistics Settings"</em> (process 2022/05803-3), the workshop served as both a scientific forum and a collaborative gathering for the OptPL research network.</p>
+
+  <blockquote>
+    <p>"The ONPCE series has been central to consolidating our research community over more than 25 years. It is where ideas turn into collaborations, and collaborations turn into results."</p>
+    <cite>— Prof. Reinaldo Morabito, Project Coordinator, UFSCar</cite>
+  </blockquote>
+
+  <h2>Scientific Program</h2>
+
+  <p>The two-day program featured three invited talks, five technical sessions, a poster session, and a panel discussion on industry–academia collaboration. On the first day, <strong>Prof. Dr. Helenice Oliveira</strong> (UNESP) delivered a talk on nonlinear cutting stock problems, followed by <strong>Prof. Dr. Claudia Archetti</strong> (University of Brescia, Italy) who presented recent advances in vehicle routing under uncertainty. The second day opened with a lecture by <strong>Prof. Dr. Eduardo Uchoa Barboza</strong> (UFF) on exact methods for combinatorial optimization.</p>
+
+  <p>Technical sessions covered all seven research areas of the OptPL project — cutting, packing, lot-sizing, scheduling, routing, location, and integrated problems — with 32 paper presentations selected from submitted abstracts. A poster session with 18 contributions was held during the coffee breaks, fostering informal discussion among participants.</p>
+
+  <h2>Industry–Academia Panel</h2>
+
+  <p>One of the highlights of this edition was the panel discussion on Friday afternoon, featuring <strong>Gabriela Furtado</strong> (Mercado Livre), <strong>Volnei dos Santos</strong> (UniSoma), and <strong>Prof. Dr. Tiago A. de Almeida</strong> (UFSCar). The panelists discussed the challenges and opportunities of transferring optimization research into real industrial applications, sharing case studies from logistics, e-commerce, and manufacturing sectors.</p>
+
+  <div class="highlight-box">
+    <h3>Event at a Glance</h3>
+    <ul>
+      <li>100+ registered participants from 12 institutions</li>
+      <li>3 invited talks by leading national and international researchers</li>
+      <li>32 paper presentations across 5 technical sessions</li>
+      <li>18 posters exhibited during coffee breaks</li>
+      <li>Industry panel with Mercado Livre, UniSoma, and UFSCar</li>
+      <li>Project researchers' meeting on Thursday evening</li>
+    </ul>
+  </div>
+
+  <h2>OptPL on Social Media</h2>
+
+  <p>The workshop also marked the public launch of the <strong>OptPL</strong> brand on social media. The thematic project is now active on LinkedIn under the name OptPL — Optimization in Production and Logistics, where it will share research updates, interviews with team members, practical applications, and news from the project. Participants were invited to follow and engage with the page to stay connected between workshops.</p>
+
+  <p>The next edition, XXVIII ONPCE, is expected to be held in 2027 at a location to be announced. The organizing committee thanked FAPESP for the continued support that makes the workshop series possible.</p>
+
+  <div class="tags">
+    <span class="tag">ONPCE</span>
+    <span class="tag">Workshop</span>
+    <span class="tag">UFSCar Sorocaba</span>
+    <span class="tag">Optimization</span>
+    <span class="tag">Operations Research</span>
+    <span class="tag">FAPESP</span>
+    <span class="tag">OptPL</span>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 OptPL — FAPESP Thematic Project 2022/05803-3 &nbsp;·&nbsp; <a href="../index.html">Back to main site</a></p>
+</footer>
+
+</body>
+</html>
