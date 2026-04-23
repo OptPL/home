@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Title Page - XXXX</title>
+  <title>Title Page - Projeto Temático FAPESP celebra 30 anos de avanços em Pesquisa Operacional e Otimização
+</title>
   <link rel="preconnect" href="https://fonts.googleapis.com"/>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
   <style>
@@ -211,7 +212,8 @@
 <div class="article-hero">
   <div class="article-hero-inner">
     <span class="article-category">News</span>
-    <h1>Main Title - XXXX</h1>
+    <h1>Main Title - Projeto Temático FAPESP celebra 30 anos de avanços em Pesquisa Operacional e Otimização
+</h1>
     <div class="article-meta">
       <span><strong>Date:</strong> Month day, Year</span>
       <span><strong>Author:</strong> OptPL Communications</span>
