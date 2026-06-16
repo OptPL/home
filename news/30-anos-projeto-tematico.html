@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Projeto Temático FAPESP celebra 30 anos de avanços em Pesquisa Operacional e Otimização — OptPL News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --teal:    #2a7d8c;
+      --teal2:   #3a9db0;
+      --orange:  #f5833a;
+      --cream:   #f5efe6;
+      --cream2:  #faf6f0;
+      --navy:    #1a3a4a;
+      --ink:     #2c2c2c;
+      --muted:   #6e7a7e;
+      --rule:    #ddd6cc;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--cream2);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--teal);
+      padding: 0 2.5rem;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(42,125,140,.3);
+    }
+    .nav-back {
+      display: flex; align-items: center; gap: .5rem;
+      color: rgba(255,255,255,.85); text-decoration: none;
+      font-family: 'Nunito', sans-serif;
+      font-size: .82rem; font-weight: 700;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--orange); }
+    .nav-back::before { content: '←'; font-size: 1rem; }
+    .nav-brand {
+      font-family: 'Nunito', sans-serif;
+      font-size: .78rem; font-weight: 900;
+      color: var(--orange); letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      background: var(--teal);
+      color: #fff;
+      padding: 4rem 2.5rem 3rem;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute; right: -60px; top: -60px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: rgba(245,131,58,.1);
+    }
+    .article-hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+    .article-category {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: .68rem; font-weight: 800;
+      letter-spacing: .14em; text-transform: uppercase;
+      padding: .2rem .75rem; border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+    .article-hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 900; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .article-meta {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      font-size: .8rem; color: rgba(255,255,255,.65);
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,.18);
+    }
+    .article-meta span strong { color: rgba(255,255,255,.9); }
+
+    /* ── ARTICLE IMAGE ── */
+    .article-image-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 2.5rem;
+      transform: translateY(-2rem);
+    }
+    .article-image-wrap figure {
+      border-radius: 4px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+    }
+    .article-image {
+      width: 100%; height: 380px;
+      overflow: hidden;
+    }
+    .article-image img {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    figcaption {
+      background: var(--navy);
+      color: rgba(255,255,255,.6);
+      font-size: .75rem; padding: .6rem 1rem;
+      font-style: italic;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 2.5rem 5rem;
+    }
+    .article-body p {
+      font-size: 1rem; color: #3a3a3a;
+      margin-bottom: 1.4rem;
+    }
+    .article-body h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.3rem; font-weight: 900;
+      color: var(--teal); margin: 2.4rem 0 .8rem;
+    }
+    .article-body h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px; height: 1em;
+      background: var(--orange);
+      margin-right: .6rem;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+    blockquote {
+      border-left: 4px solid var(--orange);
+      background: var(--cream);
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--navy); font-style: italic;
+      margin: 0;
+    }
+    blockquote cite {
+      display: block; margin-top: .6rem;
+      font-size: .8rem; color: var(--muted);
+      font-style: normal;
+    }
+    .highlight-box {
+      background: var(--teal);
+      color: #fff;
+      border-radius: 4px;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: .82rem; font-weight: 800;
+      color: var(--orange); text-transform: uppercase;
+      letter-spacing: .1em; margin-bottom: .8rem;
+    }
+    .highlight-box ul { list-style: none; }
+    .highlight-box li {
+      font-size: .9rem; color: rgba(255,255,255,.88);
+      padding: .3rem 0 .3rem 1.2rem; position: relative;
+    }
+    .highlight-box li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--orange);
+    }
+    .tags {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-top: 2.5rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+    .tag {
+      background: var(--cream); border: 1.5px solid var(--rule);
+      padding: .22rem .7rem; border-radius: 20px;
+      font-size: .76rem; color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,.45);
+      padding: 2rem 2.5rem; text-align: center; font-size: .76rem;
+    }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 1.2rem; }
+      .article-hero { padding: 3rem 1.2rem 2.5rem; }
+      .article-image-wrap, .article-body { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .article-image { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-back">Back to OptPL</a>
+  <span class="nav-brand">OptPL News</span>
+</nav>
+
+<!-- HERO -->
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-category">Reportagem</span>
+    <h1>Projeto Temático FAPESP celebra 30 anos de avanços em Pesquisa Operacional e Otimização</h1>
+    <div class="article-meta">
+      <span><strong>Data:</strong> 2026</span>
+      <span><strong>Autoria:</strong> OptPL Communications</span>
+      <span><strong>Local:</strong> São Paulo, SP</span>
+    </div>
+  </div>
+</div>
+
+<!-- IMAGE -->
+<div class="article-image-wrap">
+  <figure>
+    <div class="article-image">
+      <img src="../images/figure.jpeg"
+           alt="Pesquisadores do Projeto Temático reunidos"/>
+    </div>
+    <figcaption>Pesquisadores e alunos do Projeto Temático ao longo dos 30 anos de história do grupo. Foto: OptPL.</figcaption>
+  </figure>
+</div>
+
+<!-- BODY -->
+<div class="article-body">
+
+  <p>Com mais de 40 pesquisadores espalhados por 7 instituições de ensino superior no estado de São Paulo, o Projeto Temático <em>"Problemas de corte, empacotamento, dimensionamento de lotes, programação da produção, roteamento e localização e suas integrações em contextos industriais e logísticos"</em> já consolida 30 anos de história na área de pesquisa operacional e otimização.</p>
+
+  <p>A ideia nasce em 1995 a partir de uma iniciativa do professor Marcos Arenales, do Instituto de Ciências Matemáticas e de Computação (ICMC), interessado em reunir um grupo de pesquisadores envolvidos nas áreas de resolução de problemas de corte e empacotamento em indústrias. Sob coordenação do professor Horácio Yanasse, do Instituto Nacional de Pesquisas Espaciais (INPE), o programa temático <em>"Teoria e algoritmos de otimização combinatória: Problemas de corte e empacotamento e correlatos"</em> teve seu primeiro financiamento via CNPq e contou também com a participação dos pesquisadores Reinaldo Morabito (UFSCar), Nelson Maculan (COPPE-UFRJ), Carlos Eduardo Ferreira (IME-USP), Luiz Antonio Nogueira Lorena (LAC-INPE), Nei Yoshihiro Soma (IEC-ITA) e Yoshiko Wakabayashi (IME-USP).</p>
+
+  <p>O projeto seguiu sendo renovado a partir da FAPESP, com sua coordenação dividida entre Horácio Yanasse, Marcos Arenales, Reinaldo Morabito e Paulo França, da Universidade Estadual de Campinas (UNICAMP). A cada renovação, o escopo crescia e novos pesquisadores eram integrados, aumentando as subáreas dos problemas estudados na pesquisa: dimensionamento de lotes, programação da produção, roteamento, localização, e a integração de todos esses problemas.</p>
+
+  <h2>Ciência aplicada à sociedade</h2>
+
+  <p>O objetivo do temático é promover o estudo, o desenvolvimento e a análise de modelos matemáticos, algoritmos e métodos de solução para problemas de gestão da produção enfrentados pelas indústrias, como o corte uni, bi e tridimensional da matéria-prima necessária para a produção, a alocação dos produtos em contêineres e as melhores rotas para sua distribuição. O projeto busca ir além da área acadêmica, focando também na sua cooperação com o setor produtivo, no que chamam de "estudo de caso nas empresas".</p>
+
+  <p>Esses estudos de caso englobam parcerias com hospitais, prefeituras, e até mesmo com o Metrô de São Paulo. Grandes empresas como a Petrobras e a Ball Company também tiveram seus problemas de otimização combinatória analisados por pesquisadores do projeto, além de fábricas de móveis e suco de laranja, por exemplo. Foram incontáveis parcerias ao longo desses 30 anos de existência do grupo.</p>
+
+  <div class="highlight-box">
+    <h3>30 anos em números</h3>
+    <ul>
+      <li>Mais de 40 pesquisadores ativos em 7 instituições paulistas</li>
+      <li>554+ artigos publicados em periódicos nacionais e internacionais</li>
+      <li>78 doutores e 159 mestres formados</li>
+      <li>27 edições da Oficina Nacional (ONPCE)</li>
+      <li>Parcerias com hospitais, prefeituras, Metrô de São Paulo, Petrobras e dezenas de empresas</li>
+      <li>Colaborações internacionais com pesquisadores de mais de 10 países</li>
+    </ul>
+  </div>
+
+  <h2>A ONPCE e a construção de uma comunidade científica</h2>
+
+  <p>Outro objetivo da criação do temático foi promover a integração entre pesquisadores da área, estimulando trocas de conhecimento e parcerias profissionais. As conexões desenvolvidas pelo grupo chegam a cruzar os oceanos, ligando pesquisadores brasileiros e estrangeiros. A Oficina Nacional de Problemas de Corte, Empacotamento, Planejamento e Programação da Produção e Correlatos (ONPCE) é um grande exemplo desse incentivo.</p>
+
+  <p>Criada pelo grupo para fortalecer o networking e divulgar os trabalhos desenvolvidos na área, a oficina teve sua primeira edição em 1996 e, desde então, se repete praticamente todos os anos. Nela, profissionais das áreas são convidados para divulgarem seus trabalhos, desde jovens da iniciação científica até professores com uma carreira sólida. Grandes nomes da área da pesquisa operacional e otimização, muitas vezes de outros países, são convidados para ministrarem palestras, propiciando parcerias e oportunidades de intercâmbio para os pesquisadores brasileiros.</p>
+
+  <h2>Histórias que atravessam gerações</h2>
+
+  <p>Os 30 anos de trajetória do grupo se refletem em histórias que atravessam gerações. Coordenadora do curso de pós-graduação em Engenharia de Produção da UNESP Bauru, a professora Adriana Cherri recorda seu primeiro contato com a colega Socorro Rangel, quando participou de um minicurso em Introdução à Modelagem Matemática ministrado pela professora em 2005, no XXVIII Congresso Nacional de Matemática Aplicada e Computacional (CNMAC). Na época, Adriana era uma aluna de mestrado e Socorro já fazia parte do projeto temático — hoje, são colegas de instituição e do grupo de pesquisa.</p>
+
+  <blockquote>
+    <p>"Embora Adriana e eu sejamos matemáticas, o projeto temático é amplamente multidisciplinar dentro das exatas. Essa diversidade de formações gera uma contribuição muito rica para a pesquisa operacional, combinando abordagens executivas e olhares abstratos."</p>
+    <cite>— Profa. Maria do Socorro Nogueira Rangel, UNESP São José do Rio Preto</cite>
+  </blockquote>
+
+  <p>O grupo reúne pesquisadores de diversas áreas, como engenharia de produção, engenharia elétrica, ciência da computação, matemática pura e aplicada, entre outras. Essa diversidade de formações gera uma contribuição muito rica para a pesquisa operacional, combinando abordagens executivas e olhares abstratos. Assim, modelos são formulados, problemas concretos são resolvidos e soluções para a prática são levadas para empresas e órgãos públicos, mostrando como o projeto temático pode beneficiar a sociedade em diferentes setores.</p>
+
+  <p>Essa diversidade de áreas, somada à troca de experiências entre gerações, garante a continuidade e a relevância do grupo. Ao completar três décadas, o projeto reafirma seu compromisso de produzir ciência de qualidade e formar novos profissionais. O trabalho segue adiante, buscando soluções inteligentes para problemas reais e mostrando, na prática, como a matemática pode ajudar a sociedade a funcionar melhor.</p>
+
+  <div class="tags">
+    <span class="tag">30 Anos</span>
+    <span class="tag">Projeto Temático</span>
+    <span class="tag">FAPESP</span>
+    <span class="tag">Pesquisa Operacional</span>
+    <span class="tag">Otimização</span>
+    <span class="tag">ONPCE</span>
+    <span class="tag">OptPL</span>
+    <span class="tag">UFSCar</span>
+    <span class="tag">UNESP</span>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 OptPL — FAPESP Thematic Project 2022/05803-3 &nbsp;·&nbsp; <a href="../index.html">Back to main site</a></p>
+</footer>
+
+</body>
+</html>
