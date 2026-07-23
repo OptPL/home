@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>A trajetória de Reinaldo Morabito, coordenador do OptPL — OptPL News</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Nunito+Sans:wght@300;400;600&display=swap" rel="stylesheet"/>
+  <style>
+    :root {
+      --teal:    #2a7d8c;
+      --teal2:   #3a9db0;
+      --orange:  #f5833a;
+      --cream:   #f5efe6;
+      --cream2:  #faf6f0;
+      --navy:    #1a3a4a;
+      --ink:     #2c2c2c;
+      --muted:   #6e7a7e;
+      --rule:    #ddd6cc;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Nunito Sans', sans-serif;
+      background: var(--cream2);
+      color: var(--ink);
+      line-height: 1.75;
+    }
+
+    /* ── NAV ── */
+    nav {
+      background: var(--teal);
+      padding: 0 2.5rem;
+      height: 56px;
+      display: flex; align-items: center; justify-content: space-between;
+      position: sticky; top: 0; z-index: 100;
+      box-shadow: 0 2px 12px rgba(42,125,140,.3);
+    }
+    .nav-back {
+      display: flex; align-items: center; gap: .5rem;
+      color: rgba(255,255,255,.85); text-decoration: none;
+      font-family: 'Nunito', sans-serif;
+      font-size: .82rem; font-weight: 700;
+      transition: color .2s;
+    }
+    .nav-back:hover { color: var(--orange); }
+    .nav-back::before { content: '←'; font-size: 1rem; }
+    .nav-brand {
+      font-family: 'Nunito', sans-serif;
+      font-size: .78rem; font-weight: 900;
+      color: var(--orange); letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    /* ── ARTICLE HERO ── */
+    .article-hero {
+      background: var(--teal);
+      color: #fff;
+      padding: 4rem 2.5rem 3rem;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::before {
+      content: '';
+      position: absolute; right: -60px; top: -60px;
+      width: 400px; height: 400px; border-radius: 50%;
+      background: rgba(245,131,58,.1);
+    }
+    .article-hero-inner { max-width: 780px; margin: 0 auto; position: relative; }
+    .article-category {
+      display: inline-block;
+      background: var(--orange);
+      color: #fff;
+      font-family: 'Nunito', sans-serif;
+      font-size: .68rem; font-weight: 800;
+      letter-spacing: .14em; text-transform: uppercase;
+      padding: .2rem .75rem; border-radius: 2px;
+      margin-bottom: 1.2rem;
+    }
+    .article-hero h1 {
+      font-family: 'Nunito', sans-serif;
+      font-size: clamp(1.7rem, 3.5vw, 2.6rem);
+      font-weight: 900; line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+    .article-meta {
+      display: flex; flex-wrap: wrap; gap: 1.5rem;
+      font-size: .8rem; color: rgba(255,255,255,.65);
+      padding-top: 1.2rem;
+      border-top: 1px solid rgba(255,255,255,.18);
+    }
+    .article-meta span strong { color: rgba(255,255,255,.9); }
+
+    /* ── ARTICLE IMAGE ── */
+    .article-image-wrap {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 2.5rem;
+      transform: translateY(-2rem);
+    }
+    .article-image-wrap figure {
+      border-radius: 4px; overflow: hidden;
+      box-shadow: 0 8px 32px rgba(0,0,0,.15);
+    }
+    .article-image {
+      width: 100%; height: 380px;
+      overflow: hidden;
+    }
+    .article-image img {
+      width: 100%; height: 100%; object-fit: cover; object-position: top;
+    }
+    figcaption {
+      background: var(--navy);
+      color: rgba(255,255,255,.6);
+      font-size: .75rem; padding: .6rem 1rem;
+      font-style: italic;
+    }
+
+    /* ── ARTICLE BODY ── */
+    .article-body {
+      max-width: 780px; margin: 0 auto;
+      padding: 0 2.5rem 5rem;
+    }
+    .article-body p {
+      font-size: 1rem; color: #3a3a3a;
+      margin-bottom: 1.4rem;
+    }
+    .article-body h2 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.3rem; font-weight: 900;
+      color: var(--teal); margin: 2.4rem 0 .8rem;
+    }
+    .article-body h2::before {
+      content: '';
+      display: inline-block;
+      width: 4px; height: 1em;
+      background: var(--orange);
+      margin-right: .6rem;
+      vertical-align: middle;
+      border-radius: 2px;
+    }
+    blockquote {
+      border-left: 4px solid var(--orange);
+      background: var(--cream);
+      padding: 1.2rem 1.5rem;
+      margin: 2rem 0;
+      border-radius: 0 4px 4px 0;
+    }
+    blockquote p {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1.05rem; font-weight: 600;
+      color: var(--navy); font-style: italic;
+      margin: 0;
+    }
+    blockquote cite {
+      display: block; margin-top: .6rem;
+      font-size: .8rem; color: var(--muted);
+      font-style: normal;
+    }
+    .highlight-box {
+      background: var(--teal);
+      color: #fff;
+      border-radius: 4px;
+      padding: 1.5rem 1.8rem;
+      margin: 2rem 0;
+    }
+    .highlight-box h3 {
+      font-family: 'Nunito', sans-serif;
+      font-size: .82rem; font-weight: 800;
+      color: var(--orange); text-transform: uppercase;
+      letter-spacing: .1em; margin-bottom: .8rem;
+    }
+    .highlight-box ul { list-style: none; }
+    .highlight-box li {
+      font-size: .9rem; color: rgba(255,255,255,.88);
+      padding: .3rem 0 .3rem 1.2rem; position: relative;
+    }
+    .highlight-box li::before {
+      content: '→'; position: absolute; left: 0;
+      color: var(--orange);
+    }
+    .tags {
+      display: flex; flex-wrap: wrap; gap: .5rem;
+      margin-top: 2.5rem; padding-top: 1.5rem;
+      border-top: 1px solid var(--rule);
+    }
+    .tag {
+      background: var(--cream); border: 1.5px solid var(--rule);
+      padding: .22rem .7rem; border-radius: 20px;
+      font-size: .76rem; color: var(--muted);
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--navy); color: rgba(255,255,255,.45);
+      padding: 2rem 2.5rem; text-align: center; font-size: .76rem;
+    }
+    footer a { color: var(--orange); text-decoration: none; }
+
+    @media (max-width: 600px) {
+      nav { padding: 0 1.2rem; }
+      .article-hero { padding: 3rem 1.2rem 2.5rem; }
+      .article-image-wrap, .article-body { padding-left: 1.2rem; padding-right: 1.2rem; }
+      .article-image { height: 220px; }
+    }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a href="../index.html" class="nav-back">Back to OptPL</a>
+  <span class="nav-brand">OptPL News</span>
+</nav>
+<div style="background: var(--cream); border-bottom: 2px solid var(--orange); padding: .7rem 2.5rem; text-align: center;">
+  <p style="font-size: .82rem; color: var(--navy); font-style: italic; margin: 0;">
+    🌐 This article is in Portuguese. International visitors: please use your browser's built-in translation feature (right-click → "Translate to English") to read this page.
+  </p>
+</div>
+
+<div class="article-hero">
+  <div class="article-hero-inner">
+    <span class="article-category">Perfil e Trajetória</span>
+    <h1>A trajetória de Reinaldo Morabito, coordenador do OptPL</h1>
+    <div class="article-meta">
+      <span><strong>Data:</strong> 23/07/2026</span>
+      <span><strong>Autoria:</strong> OptPL Communications</span>
+      <span><strong>Local:</strong> São Carlos, SP</span>
+    </div>
+  </div>
+</div>
+
+<div class="article-image-wrap">
+  <figure>
+    <div class="article-image">
+      <img src="../images/06_reinaldo.png"
+           alt="Foto de Reinaldo Morabito"/>
+    </div>
+    <figcaption>Professor Reinaldo Morabito, atual coordenador do projeto temático da FAPESP e professor da UFSCar.</figcaption>
+  </figure>
+</div>
+
+<div class="article-body">
+
+  <p>Co-fundador da Oficina Nacional de Problemas de Corte, Empacotamento, Planejamento e Programação da Produção e Correlatos (ONPCE) e professor titular do Departamento de Engenharia de Produção da UFSCar, Reinaldo Morabito é o atual coordenador do projeto temático “Problemas de corte, empacotamento, dimensionamento de lotes, programação da produção, roteamento e localização e suas integrações em contextos industriais e logísticos”. O professor é, também, um dos cinco assessores internos da área de Engenharias l da FAPESP e membro do Instituto de Estudos Avançados e Estratégicos da UFSCar.</p>
+
+  <h2>O fascínio inicial: das obras aos mainframes</h2>
+
+  <p>O interesse de Reinaldo pela engenharia veio de casa. Desde pequeno acompanhava o pai, formado em Engenharia Arquitetônica (curso que, atualmente, não existe mais), em seus trabalhos nas obras e construções. Não foi à toa que escolheu cursar Engenharia Civil na Unicamp. Mas quais foram as motivações que levaram Reinaldo a sair da área de civil para a área de pesquisa operacional e engenharia de produção?</p>
+
+  <p>Durante a graduação, no início da década de 1980, Reinaldo conhece os mainframes, os “grandes computadores”. Diferente de hoje em dia, em que grande parte das casas brasileiras já possuem seus compactos computadores pessoais (chamados de microcomputadores), o acesso aos mainframes era feito exclusivamente por meio de terminais específicos de uso restrito, ou seja: alunos de graduação não tinham permissão para utilizá-los diretamente.</p>
+
+  <p>Foi movido pela vontade de poder utilizar um desses terminais que Reinaldo ingressou em uma iniciação científica (IC) na Unicamp, já que os bolsistas de IC tinham acesso liberado aos computadores grandes. Nesse período, realizou dois projetos na área de pesquisa operacional e otimização, sendo um deles na área de gestão de projetos e outro na área de otimização de projetos de pontes estaiadas.</p>
+
+  <h2>Do mercado de trabalho ao retorno acadêmico</h2>
+
+  <p>A carreira acadêmica não interessou Reinaldo de imediato, que saiu da graduação direto para o mercado de trabalho. Vestiu o capacete de obras e foi para debaixo do sol trabalhar como engenheiro de construção de fábricas de suco de laranja. Quando os superiores perceberam o interesse de Reinaldo pela área de computação e gestão, ele passou a desenvolver sistemas voltados ao gerenciamento dos projetos de construção dessas fábricas. Aqui surgem resquícios de sua iniciação científica e trabalhos com pesquisa operacional e otimização.</p>
+
+  <p>E como ocorreu o retorno ao mundo acadêmico? Após alguns anos na construção das fábricas de suco de laranja, Reinaldo fundou uma empresa startup junto com mais três amigos. Eles trabalhavam desenvolvendo sistemas computacionais de otimização para empresas de móveis em grande escala, celulose para produção de papel, fábricas de freios de automóveis, entre outras. Tudo isso também envolvia pesquisa operacional e otimização, aproximando-o ainda mais da área da engenharia de produção.</p>
+
+  <p>O contato com a otimização dos cortes industriais se deu graças a um de seus primeiros clientes, uma indústria envolvida com corte de chapas de madeira. O interesse pelo que viria a ser o primeiro objeto de estudo do projeto temático foi o que motivou Reinaldo a aprofundar seu conhecimento antes de dar continuidade aos trabalhos da startup.</p>
+
+  <p>Foi assim que Reinaldo decidiu iniciar um mestrado no Instituto de Ciências Matemáticas e de Computação (ICMC) da USP São Carlos, na área de Computação e Matemática Computacional, buscando se aprimorar nas técnicas de pesquisa operacional, otimização, programação matemática e heurística. O mestrado correu sem bolsa, mas o processo foi tão motivante que o convenceu a dar mais uma chance para a carreira acadêmica, seguindo para um doutorado na USP, na área de Engenharia de Transportes.</p>
+
+  <h2>A consolidação e a formação de redes internacionais</h2>
+
+  <p>No decorrer do doutorado, os problemas com carregamentos de cargas em pallets, containers, caminhões e vagões ferroviários chamaram sua atenção, familiarizando Reinaldo com a área de empacotamento, que se tornaria outro dos temas principais do projeto temático. Junto de seu co-orientador de doutorado, Marcos Arenales, passaram a buscar outros pesquisadores que dividissem com eles o interesse pelos problemas de otimização combinatória envolvendo corte e empacotamento, formando o primeiro grupo que daria início ao programa.</p>
+
+  <div class="highlight-box">
+    <h3>Destaques da Formação Acadêmica</h3>
+    <ul>
+      <li>Graduação em Engenharia Civil pela Unicamp</li>
+      <li>Mestrado em Computação e Matemática Computacional pelo ICMC-USP</li>
+      <li>Doutorado em Engenharia de Transportes pela USP</li>
+      <li>Pós-doutorado no Massachusetts Institute of Technology (MIT)</li>
+      <li>Livre docência na Engenharia Mecânica da USP</li>
+      <li>Períodos de pesquisa no exterior: UWE (Inglaterra) e Univ. do Porto (Portugal)</li>
+    </ul>
+  </div>
+
+  <p>A formação acadêmica de Reinaldo é extensa, e as experiências no exterior permitiram que ele ampliasse sua rede de contatos, trazendo novos colaboradores ligados a universidades internacionais para o projeto temático. Enquanto ainda fazia seu doutorado, Reinaldo passou em um concurso para docente do curso de Engenharia de Produção da UFSCar. Logo notou que poucos colegas trabalhavam com pesquisa operacional no curso, e não demorou muito para que surgissem diversos alunos interessados em contribuir com seus projetos.</p>
+
+  <h2>O legado para a nova geração</h2>
+
+  <p>Reinaldo já orientou mais de quarenta doutorados, mais de trinta mestrados, além de vários projetos de pós-doutorado, iniciação científica e trabalhos de conclusão de curso. Os alunos não vinham apenas da engenharia de produção, como também da Matemática, Estatística, Agronomia, engenharias Química, Elétrica e da Computação. Muitos desses jovens foram inspirados a seguir carreira acadêmica e tornaram-se pesquisadores parceiros do projeto temático e professores de universidades públicas e privadas. O professor relata que se sente orgulhoso ao ver seus alunos tornando-se colegas de profissão.</p>
+
+  <p>A maioria dos alunos que chegam no curso de Engenharia de Produção tem como objetivo a entrada no mercado de trabalho, sem muito interesse pela carreira acadêmica. Reinaldo afirma que é muito importante estimular o interesse dos discentes pela pesquisa, coisa que é mais desafiadora fora dos cursos de ciências básicas. Apesar de demonstrar seu apreço pelos estudantes que trilham o caminho acadêmico, o professor não deixa de expressar seu orgulho pelos diversos alunos que também tornaram-se muito bem sucedidos no mercado de trabalho.</p>
+
+  <blockquote>
+    <p>O que se vê agora é a continuidade natural desse percurso: um projeto vivo, guiado por colaboração e dedicação, que se vê em renovação constante. O trabalho de Reinaldo e seus colegas é um grande exemplo do potencial da ciência em transcender gerações.</p>
+  </blockquote>
+
+  <p>Compondo sua grande bagagem profissional, Reinaldo atua agora como coordenador do projeto temático vigente, sendo este o terceiro projeto temático da FAPESP que coordena. O projeto conta, atualmente, com mais de quarenta pesquisadores, número que cresce a cada ano. Quando questionado sobre seu futuro no temático, Reinaldo afirma: após quinze anos de coordenação, está pronto para passar a liderança a outro colega, enfatizando não apenas a importância de dar continuidade ao trabalho realizado nos últimos trinta anos, como também de trazer renovação e novos olhares, características indispensáveis para que o projeto siga crescendo de maneira dinâmica.</p>
+
+  <p>O atual projeto tem vigência até 2028, e mesmo que já esteja apto à aposentadoria, o professor revela que ainda terá grande prazer em continuar participando dos temáticos, mesmo que não mais como coordenador. Ao longo de três décadas, Reinaldo contribuiu para que o projeto crescesse, gerasse resultados frutíferos e alcançasse cada vez mais profissionais.</p>
+
+  <div class="tags">
+    <span class="tag">OptPL</span>
+    <span class="tag">Reinaldo Morabito</span>
+    <span class="tag">Pesquisa Operacional</span>
+    <span class="tag">UFSCar</span>
+    <span class="tag">FAPESP</span>
+    <span class="tag">Trajetória</span>
+    <span class="tag">Engenharia de Produção</span>
+  </div>
+
+</div>
+
+<footer>
+  <p>© 2026 OptPL — FAPESP Thematic Project 2022/05803-3 &nbsp;·&nbsp; <a href="../index.html">Back to main site</a></p>
+</footer>
+
+</body>
+</html>
